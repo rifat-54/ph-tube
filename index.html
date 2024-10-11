@@ -6,6 +6,12 @@
     <title>PH TUBE</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active{
+        background-color: red;
+        color: white;
+      }
+    </style>
 </head>
 <body>
     <nav class=" w-11/12 mx-auto flex p-3 justify-between border-b-2">
@@ -14,7 +20,7 @@
        </div>
        <div>
         <label class="input input-bordered flex items-center gap-2">
-        <input type="text" class="grow" placeholder="Search" />
+        <input id="input-id" type="text" class="grow" placeholder="Search" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -27,11 +33,33 @@
         </svg>
       </label></div>
        <div>
-        <button class="btn">Blog</button>
+        <button onclick="" class="btn">Blog</button>
        </div>
     </nav>
-    <main>
+    <div id="btn-container" class="flex justify-center my-5 gap-7">
 
+    </div>
+    <main>
+          <section id="vedios" class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-11/12 mx-auto">
+
+          </section>
     </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+<button class="btn hidden" onclick="customModal.showModal()">open modal</button>
+<dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+  <div id="details-container" class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    <script src="js/load.js"></script>
 </body>
 </html>
